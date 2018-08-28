@@ -174,14 +174,6 @@ aug QFClose
   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
 aug END
 
-" Javascript folding that doesn't suck
-let javaScript_fold=1
-au FileType javascript call JavaScriptFold()
-
-" Conceal
-set conceallevel=2
-hi Conceal ctermfg=233 ctermbg=208
-
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
